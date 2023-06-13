@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .p1 {
+    font-family: "Lucida Handwriting", cursive;
+    font-size: x-large;
+    }
+    a:link, a:visited {
+    background-color: #6160a0;
+    color: white;
+    padding: 2px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    }
+    body  {
+    background-color: #cfb775;
+    background-image: url("food.gif");
+    }
+    </style>
+</head>
+<body style="text-align: center;align-items: center;">
+    <div style="align-items: center;">
+
+     <%
+        for(unsigned i = 0;i < context.size();i++){
+    %>
+    <br />
+    <div style="background-color: rgb(216, 161, 79);padding: 3%; max-width: 50%; border-radius: 10px; margin: auto; ">
+    <%
+            cout << context[to_string(i)];            
+    %>
+    <br />
+    <form action="/RecipePage">
+        <input type="text" name="rate" placeholder="Rate to this recipe" />
+        <br />
+        <button type="submit" name="show_compelet_info"
+        style="color: cornsilk;align-items: center; 
+        background-color: rgb(122, 83, 24);
+        display:block; width: 100%; padding: 7px;"
+        value=<% cout << i; %>>Send Rate & Go to Recipe Page</button>
+    </form> 
+    </div>
+   
+    <%     
+        }  
+        if(context.size() == 0){
+    %>
+    <div style=" background-color: rgb(216, 161, 79);padding: 3%; max-width: 50%; border-radius: 10px; margin: auto; ">
+    <%   
+            cout << "Empty!";
+        }
+    %>
+    </div>
+
+    <br />
+    <br />
+    <form action="/CommonPage" method="get">
+        <button type="submit" style="align-items: center;color: cornsilk; background-color: rgb(122, 83, 24);display:block;align-items: center; width: 20%; padding: 7px;">Back</button>
+    </form>
+</div>
+</body>
+
+</html>
