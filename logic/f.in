@@ -1,0 +1,65 @@
+POST signup ? u fatemeh p 123 type chef
+OK
+POST recipes ? title Pizza_rustika ingredients fish,vegtable,pasta vegetarian Yes minutes_to_ready 45 tags lunch image_address pizza@ut.ac.ir
+1
+POST recipes ? title susis ingredients vegtable,pasta vegetarian Yes minutes_to_ready 45 tags lunch image_address pizza@ut.ac.ir
+2
+POST logout
+OK
+POST signup_supplier ? name majid email majid.gmail.com p 124
+OK
+POST offers ? ingr vegtable p 7000 c 20 pp 1000
+OK
+POST offers ? ingr pasta p 4000 c 20 pp 1000
+OK
+POST logout
+OK
+POST signup_supplier ? name ali email ali.gmail.com p 125
+OK
+POST offers ? ingr fish p 2000 c 20 pp 1000
+OK
+PUT offers ? ingr fish p 3000 c 20 pp 1000
+OK
+POST offers ? ingr vegtable p 5000 c 20 pp 1000
+OK
+POST logout
+OK
+POST signup ? u mahdie p 126 type user
+OK
+PUT credits ? money 40000
+OK
+GET credits
+40000
+POST orders ? recipeid 1
+ali fish vegtable
+majid pasta
+15000
+POST orders ? recipeid 2
+ali vegtable
+majid pasta
+11000
+GET credits
+14000
+POST logout
+OK
+POST login ? email majid.gmail.com p 124
+OK
+GET credits
+10000
+POST logout
+OK
+POST login ? u mahdie p 126
+OK
+GET credits
+14000
+GET orders
+====order_1====
+1
+ali fish vegtable
+majid pasta
+15000
+====order_2====
+2
+ali vegtable
+majid pasta
+11000

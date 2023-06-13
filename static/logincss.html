@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+    .p1 {
+    font-family: "Lucida Handwriting", cursive;
+    font-size: large;
+    }
+    body  {
+    background-image: url("foodwall.gif");
+    background-color: #c8b0d3;
+    }
+    </style>
+    </head>
+  <body style="text-align: center;">
+    <br />
+    <p >Enter your Username and Password.</p>
+    <br />
+    <div style="background-color: rgb(146, 107, 167); padding: 1%; max-width: 300px; border-radius: 3px; margin: auto; ">
+      <form action="/login" method="post">
+        <p>Login Form</p>
+        <input name="username" type="text" placeholder="Username" style="display:block; margin: auto; margin-bottom: 10px; padding: 5px; width: 94%;" />
+        <input name="password" type="password" placeholder="Password" style="display:block; margin: auto; margin-bottom: 10px; padding: 5px; width: 94%;" />
+        <br />
+        <button type="submit" style="display:block; width: 100%; padding: 7px;">Login</button>
+      </form>
+      <form action="/" method="post">
+        <button type="submit" style="display:block; width: 100%; padding: 7px;">Return Home</button>
+      </form>
+    </div>
+  </body>
+</html>

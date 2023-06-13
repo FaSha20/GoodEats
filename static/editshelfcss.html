@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <style>
+  .p1 {
+  font-family: "Lucida Handwriting", cursive;
+  font-size: larger;
+  text-align: left;
+  }
+  
+  body  {
+  background-color: #9f5ace;
+  }
+  </style>
+  </head>
+  <body style="text-align: center;">
+    <br />
+    <h2>Edit Page</h2>
+    <br />
+    <div style="background-color: rgb(95, 15, 161);padding: 5%; max-width: 300px; border-radius: 10px; margin: auto; ">
+        <form action="/EditShelfPage" method="post">
+            <p>Add Shelf</p>
+            <input name="title" type="text" placeholder="Title" style="display:block; margin: auto; margin-bottom: 10px; padding: 5px; width: 94%;" />
+            <input name="recipes" type="text" placeholder="Rcipe's Titles ( seperated by ' , ' )" style="display:block; margin: auto; margin-bottom: 10px; padding: 5px; width: 94%;" />
+            <br />
+            <button type="submit" style="display:block; width: 100%; padding: 7px;">Add</button>
+        </form>  
+    </div>
+    <br />
+    
+    <div style="background-color: rgb(184, 53, 184);padding: 5%; max-width: 300px; border-radius: 10px; margin: auto; ">
+        <form action="/EditShelfPage" method="post">
+            <p>Remove Shelf</p>
+            <input name="r_title" type="text" placeholder="Title" style="display:block; margin: auto; margin-bottom: 10px; padding: 5px; width: 94%;" />
+            <input name="r_id" type="text" placeholder="Recipe ID" style="display:block; margin: auto; margin-bottom: 10px; padding: 5px; width: 94%;" />
+            <button type="submit" style="display:block; width: 100%; padding: 7px;">Remove</button>
+        </form>  
+    </div>
+    <br />
+    <br />
+    <form action="/CommonPage" method="get">
+        <button type="submit" style="display:table-cell; width: 20%; padding: 7px;">Back</button>
+    </form>
+    <form action="/" method="post">
+        <button type="submit" style="display:table-cell; width: 20%; padding: 7px;">Return Home</button>
+    </form>
+  </body>
+</html>

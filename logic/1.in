@@ -1,0 +1,27 @@
+POST signup ? username ghazal password 123 type chef
+POST recipes ? title Lasagna ingredients Italian_sausage,onion,tomato_paste,mozzarella_cheese vegetarian No minutes_to_ready 30 tags lunch,dinner image_address lasagna@ut.ac.ir
+POST recipes ? title Spaghetti_puttanesca ingredients olive_oil,spaghetti,garlic vegetarian Yes minutes_to_ready 30 tags dinner image_address spaghetti@ut.ac.ir
+POST logout
+POST signup_supplier ? name parsa email test@gmail.com password 1
+POST offers ? ingredient macaroni price 40 count 10 packaging 10
+POST offers ? ingredient garlic price 30 count 5 packaging 5
+POST offers ? ingredient cheddar price 20 count 4 packaging 10
+PUT offers ? ingredient Italian_sausage price 30 count 10
+PUT offers ? ingredient cheddar price 40 count 4
+POST logout
+POST signup_supplier ? name bardia email test2@gmail.com password 333
+POST offers ? ingredient cheddar price 30 count 10 packaging 5
+POST offers ? ingredient macaroni price 45 count 15 packaging 12
+POST offers ? ingredient garlic price 40 count 10 packaging 8
+POST offers ? ingredient spaghetti price 50 count 10 packaging 15
+DELETE offers ? ingredient spaghetti
+POST offers ? ingredient olive_oil price 20 count 30 packaging 10
+POST logout
+POST signup ? username eliza password 12 type user
+GET recipes
+GET credits
+PUT credits ? money 200
+GET credits
+POST orders ? recipe_id 1
+POST orders ? recipe_id 2
+GET orders
